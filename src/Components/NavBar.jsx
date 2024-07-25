@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +29,11 @@ function NavBar() {
       </div>
       <div className="flex-1 text-center sm:text-left sm:flex sm:items-center">
         <a href="/" className="btn btn-ghost normal-case text-xl">
-          <img src="/images/logo.png" alt="Logo" className="h-14 w-18 inline-block" />
+          <img
+            src="/images/logo.png"
+            alt="Logo"
+            className="h-14 w-18 inline-block"
+          />
         </a>
       </div>
       <div className="flex-none hidden sm:flex items-center space-x-2 sm:space-x-4">
@@ -39,11 +44,11 @@ function NavBar() {
           ORDER NOW
         </button>
         <button className="btn btn-ghost">
-          Sign In
+          <Link to="/login">Sign In</Link>
         </button>
-        <button className="btn btn-ghost">
-          Register
-        </button>
+        <Link to="register">
+          <button className="btn btn-ghost">Register</button>
+        </Link>
       </div>
       {/* Mobile Menu */}
       {isMenuOpen && (
@@ -54,12 +59,8 @@ function NavBar() {
           >
             ORDER NOW
           </button>
-          <button className="btn btn-ghost w-full">
-            Sign In
-          </button>
-          <button className="btn btn-ghost w-full">
-            Register
-          </button>
+          <button className="btn btn-ghost w-full">Sign In</button>
+          <button className="btn btn-ghost w-full">Register</button>
         </div>
       )}
     </div>
