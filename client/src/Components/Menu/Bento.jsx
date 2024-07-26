@@ -2,52 +2,66 @@ function Bento() {
   return (
     <div className="flex space-x-4 mb-6">
       <div className="card bg-base-100 w-96 shadow-xl">
-        <figure>
+        <figure className="px-10 pt-10">
           <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            src="/images/katsu-curry.png"
             alt="Shoes"
+            className="rounded-xl"
           />
         </figure>
-        <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+        <div className="card-body items-center text-center">
+          <h2 className="card-title">Pork Katsu Curry Bento </h2>
+          <div className="card-actions">
+            <button
+              className="btn text-white"
+              style={{ backgroundColor: "#D84044" }}
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
       <div className="card bg-base-100 w-96 shadow-xl">
-        <figure>
+        <figure className="px-10 pt-10">
           <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            src="/images/chicken-teriyaki.png"
             alt="Shoes"
+            className="rounded-xl"
           />
         </figure>
-        <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+        <div className="card-body items-center text-center">
+          <h2 className="card-title">Chicken Teriyaki Bento</h2>
+          <div className="card-actions">
+            <button
+              className="btn text-white"
+              style={{ backgroundColor: "#D84044" }}
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
       <div className="card bg-base-100 w-96 shadow-xl">
-        <figure>
+        <figure className="px-10 pt-10">
           <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            src="/images/sushi-bento.png"
             alt="Shoes"
+            className="rounded-xl"
           />
         </figure>
-        <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+        <div className="card-body items-center text-center">
+          <h2 className="card-title">Sushi Bento</h2>
+          <div className="card-actions">
+            <button
+              className="btn text-white"
+              style={{ backgroundColor: "#D84044" }}
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
     </div>
-   
   );
 }
 
