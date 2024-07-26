@@ -11,7 +11,7 @@ function Menu() {
   return (
     <>
       <NavBar />
-      <div className="container mx-auto mt-4">
+      <div className="container mx-auto mt-16">
         <div className="flex justify-center space-x-4 mb-8">
           <button
             className={`btn ${selectedCategory === "Bento" ? "bg-gray-800 text-white" : "bg-gray-400 text-gray-800"}`}
