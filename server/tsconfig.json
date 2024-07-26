@@ -22,6 +22,16 @@
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
+    "noPropertyAccessFromIndexSignature": false,
+
+    // Some stricter flags (enabled by default)
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+
+    // dir 
+
+    "outDir": "./dist",
+    "rootDir": "./src",
+
   }
 }

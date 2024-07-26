@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "cd client && bun dev",
+    "server": "cd server && bun dev",
+
+
+        "kyoto": "concurrently -k -n \"REACT,EXPRESS\" -c \"blue,green\" \"npm run client\" \"npm run server\""
+
   },
   "keywords": [],
   "author": "",
