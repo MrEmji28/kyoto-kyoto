@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaGoogle, FaFacebook } from "react-icons/fa"; // Import icons
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
 
@@ -12,7 +13,17 @@ function Login() {
     console.log('Email:', email);
     console.log('Password:', password);
   };
-  
+
+  const handleGoogleLogin = () => {
+    // Handle Google login logic here
+    console.log('Login with Google');
+  };
+
+  const handleFacebookLogin = () => {
+    // Handle Facebook login logic here
+    console.log('Login with Facebook');
+  };
+
   return (
     <>
       <NavBar />
@@ -50,6 +61,24 @@ function Login() {
               Login
             </button>
           </form>
+          <div className="flex space-x-2 mt-4">
+            <button
+              onClick={handleGoogleLogin}
+              className="btn btn-secondary flex items-center space-x-2 w-full md:w-1/2"
+              style={{ backgroundColor: "#DB4437" }}
+            >
+              <FaGoogle className="text-white text-lg" />
+              <span>Google</span>
+            </button>
+            <button
+              onClick={handleFacebookLogin}
+              className="btn btn-secondary flex items-center space-x-2 w-full md:w-1/2"
+              style={{ backgroundColor: "#4267B2" }}
+            >
+              <FaFacebook className="text-white text-lg" />
+              <span>Facebook</span>
+            </button>
+          </div>
         </div>
       </div>
       <Footer />
