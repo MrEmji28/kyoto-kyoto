@@ -1,7 +1,8 @@
 function HomeOffer() {
   return (
     <>
-      <div className="carousel rounded-box mt-2 flex flex-wrap justify-center sm:carousel-end sm:flex-nowrap">
+      <div className="carousel rounded-box mt-2 flex flex-wrap justify-center sm:carousel-end sm:flex-nowrap"
+      style={{backgroundColor: " #E6DED1"}}>
         <div className="carousel-item m-2 relative">
           <img
             src="/images/homeoffer1.png"

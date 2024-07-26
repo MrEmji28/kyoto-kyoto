@@ -1,7 +1,7 @@
 function Banner() {
   return (
     <>
-      <div className="carousel h-[24rem] w-full mt-10">
+      <div className="carousel h-[24rem] w-full mt-16">
         <div id="slide1" className="carousel-item relative h-96 w-full">
           <img
             src="/images/banner1.png"

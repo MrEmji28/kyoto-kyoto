@@ -9,7 +9,8 @@ function NavBar() {
   };
 
   return (
-    <div className="navbar bg-base-100 w-full fixed top-0 left-0 flex items-center justify-between p-4">
+    <div className="navbar bg-base-100 w-full fixed top-0 left-0 flex items-center justify-between p-4 "
+    style={{backgroundColor: " #E6DED1"}}>
       <div className="flex-none">
         <button className="btn btn-square btn-ghost" onClick={toggleMenu}>
           <svg
