@@ -6,13 +6,19 @@ import Drinks from "../Components/Menu/Drinks";
 import NavBar from "../Components/NavBar";
 
 function Menu() {
-  const [selectedCategory, setSelectedCategory] = useState("Bento");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   return (
     <>
       <NavBar />
       <div className="container mx-auto mt-16">
         <div className="flex justify-center space-x-4 mb-8">
+          <button
+            className={`btn ${selectedCategory === "All" ? "bg-gray-800 text-white" : "bg-gray-400 text-gray-800"}`}
+            onClick={() => setSelectedCategory("All")}
+          >
+            All
+          </button>
           <button
             className={`btn ${selectedCategory === "Bento" ? "bg-gray-800 text-white" : "bg-gray-400 text-gray-800"}`}
             onClick={() => setSelectedCategory("Bento")}
@@ -38,6 +44,14 @@ function Menu() {
             Drinks
           </button>
         </div>
+        {selectedCategory === "All" && (
+          <>
+            <Bento />
+            <Ramen />
+            <Sushi />
+            <Drinks />
+          </>
+        )}
         {selectedCategory === "Bento" && <Bento />}
         {selectedCategory === "Ramen" && <Ramen />}
         {selectedCategory === "Sushi" && <Sushi />}
