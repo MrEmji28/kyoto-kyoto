@@ -1,7 +1,8 @@
 import { useState } from "react";
+import NavBar from "../Components/NavBar";
+import Footer from "../Components/Footer";
 
 function Login() {
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -14,9 +15,10 @@ function Login() {
   
   return (
     <>
+      <NavBar />
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
         <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
-          <h2 className="text-2xl font-bold text-center">Login</h2>
+          <h2 className="text-2xl font-bold text-center">Welcome, customer! <br /> Please sign in</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="form-control">
               <label className="label">
@@ -44,12 +46,13 @@ function Login() {
                 required
               />
             </div>
-            <button type="submit" className="btn btn-primary w-full">
+            <button type="submit" className="btn btn-primary w-full" style={{ backgroundColor: "#D84044" }}>
               Login
             </button>
           </form>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

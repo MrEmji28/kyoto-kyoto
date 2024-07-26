@@ -46,9 +46,10 @@ function NavBar() {
         <button className="btn btn-ghost">
           <Link to="/login">Sign In</Link>
         </button>
-        <Link to="register">
-          <button className="btn btn-ghost">Register</button>
-        </Link>
+
+        <button className="btn btn-ghost">
+          <Link to="/register">Register</Link>
+        </button>
       </div>
       {/* Mobile Menu */}
       {isMenuOpen && (
