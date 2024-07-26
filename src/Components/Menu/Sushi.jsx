@@ -1,7 +1,7 @@
 function Sushi() {
   return (
     <>
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 mb-6">
         <div className="card bg-base-100 w-96 shadow-xl">
           <figure>
             <img
