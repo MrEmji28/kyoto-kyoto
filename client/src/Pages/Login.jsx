@@ -1,4 +1,6 @@
+// src/pages/Login.jsx
 import { useState } from "react";
+import axios from "axios";
 import { FaGoogle, FaFacebook } from "react-icons/fa"; // Import icons
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
@@ -6,12 +8,23 @@ import Footer from "../Components/Footer";
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(""); // To handle errors
+  const [token, setToken] = useState(""); // To store JWT token (if needed)
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Handle login logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
+    try {
+      const response = await axios.post("http://localhost:5000/api/auth/login", {
+        email,
+        password,
+      });
+      console.log("Login successful:", response.data);
+      setToken(response.data.token); // Save the token (or handle it as needed)
+      // Handle successful login (e.g., redirect to another page)
+    } catch (error) {
+      console.error("Error logging in:", error.response?.data || error.message);
+      setError(error.response?.data?.error || "An error occurred during login");
+    }
   };
 
   const handleGoogleLogin = () => {
@@ -39,6 +52,7 @@ function Login() {
             </div>
             <div className="flex-1 p-8 space-y-6">
               <h2 className="text-2xl font-bold text-center">Welcome, customer! <br /> Please sign in</h2>
+              {error && <p className="text-red-500 text-center">{error}</p>}
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="form-control">
                   <label className="label">
