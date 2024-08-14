@@ -4,19 +4,19 @@ function Sushi() {
       <div className="card bg-white max-w-sm w-full shadow-lg rounded-lg overflow-hidden border border-gray-200">
         <figure className="relative">
           <img
-            src="/images/katsu-curry.png"
-            alt="Pork Katsu Curry Bento"
+            src="/images/salmon-sashimi.png"
+            alt="Salmon Sashimi"
             className="w-full h-48 object-cover"
           />
         </figure>
         <div className="p-6 text-center">
-          <h2 className="text-2xl font-semibold mb-2">Pork Katsu Curry Bento</h2>
-          <p className="text-lg text-gray-600 mb-4">A delicious bento box with pork katsu curry, rice, and vegetables.</p>
+          <h2 className="text-2xl font-semibold mb-2">Salmon Sashimi</h2>
+          <p className="text-lg text-gray-600 mb-4">Fresh, thinly sliced salmon served raw, highlighting its rich, buttery texture and delicate flavor</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <div
               className="bg-gray-200 text-gray-700 font-medium px-4 py-2 rounded-lg shadow-md"
             >
-              PHP. 180.00
+              PHP. 280.00
             </div>
             <button
               className="btn bg-red-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-red-700"
@@ -29,19 +29,19 @@ function Sushi() {
       <div className="card bg-white max-w-sm w-full shadow-lg rounded-lg overflow-hidden border border-gray-200">
         <figure className="relative">
           <img
-            src="/images/chicken-teriyaki.png"
-            alt="Chicken Teriyaki Bento"
+            src="/images/salmon-nigiri.png"
+            alt="Salmon Nigiri"
             className="w-full h-48 object-cover"
           />
         </figure>
         <div className="p-6 text-center">
-          <h2 className="text-2xl font-semibold mb-2">Chicken Teriyaki Bento</h2>
-          <p className="text-lg text-gray-600 mb-4">Tender chicken teriyaki served with rice and vegetables.</p>
+          <h2 className="text-2xl font-semibold mb-2">Salmon Nigiri</h2>
+          <p className="text-lg text-gray-600 mb-4">Succulent slices of fresh salmon delicately draped over a small mound of seasoned sushi rice</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <div
               className="bg-gray-200 text-gray-700 font-medium px-4 py-2 rounded-lg shadow-md"
             >
-              PHP. 200.00
+              PHP. 280.00
             </div>
             <button
               className="btn bg-red-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-red-700"
@@ -54,19 +54,19 @@ function Sushi() {
       <div className="card bg-white max-w-sm w-full shadow-lg rounded-lg overflow-hidden border border-gray-200">
         <figure className="relative">
           <img
-            src="/images/sushi-bento.png"
-            alt="Sushi Bento"
+            src="/images/california-maki.png"
+            alt="California Maki"
             className="w-full h-48 object-cover"
           />
         </figure>
         <div className="p-6 text-center">
-          <h2 className="text-2xl font-semibold mb-2">Sushi Bento</h2>
-          <p className="text-lg text-gray-600 mb-4">A delightful sushi bento box with assorted sushi rolls and sides.</p>
+          <h2 className="text-2xl font-semibold mb-2">California Maki</h2>
+          <p className="text-lg text-gray-600 mb-4">A delicious sushi roll featuring a blend of creamy avocado, sweet crab meat, and crisp cucumber</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <div
               className="bg-gray-200 text-gray-700 font-medium px-4 py-2 rounded-lg shadow-md"
             >
-              PHP. 250.00
+              PHP. 220.00
             </div>
             <button
               className="btn bg-red-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-red-700"

@@ -35,7 +35,7 @@ function Menu() {
             className={`btn ${selectedCategory === "Sushi" ? "bg-gray-800 text-white" : "bg-gray-400 text-gray-800"}`}
             onClick={() => setSelectedCategory("Sushi")}
           >
-            Sushi
+            Maki and Sushi
           </button>
           <button
             className={`btn ${selectedCategory === "Drinks" ? "bg-gray-800 text-white" : "bg-gray-400 text-gray-800"}`}

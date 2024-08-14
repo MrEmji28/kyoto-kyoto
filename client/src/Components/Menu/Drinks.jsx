@@ -4,19 +4,19 @@ function Drinks() {
       <div className="card bg-white max-w-sm w-full shadow-lg rounded-lg overflow-hidden border border-gray-200">
         <figure className="relative">
           <img
-            src="/images/katsu-curry.png"
-            alt="Pork Katsu Curry Bento"
+            src="/images/kyoto-milktea.png"
+            alt="Kyoto Milk Tea"
             className="w-full h-48 object-cover"
           />
         </figure>
         <div className="p-6 text-center">
-          <h2 className="text-2xl font-semibold mb-2">Pork Katsu Curry Bento</h2>
-          <p className="text-lg text-gray-600 mb-4">A delicious bento box with pork katsu curry, rice, and vegetables.</p>
+          <h2 className="text-2xl font-semibold mb-2">Kyoto Milk  Tea</h2>
+          <p className="text-lg text-gray-600 mb-4">A smooth and creamy milk tea infused with a hint of traditional Japanese flavors</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <div
               className="bg-gray-200 text-gray-700 font-medium px-4 py-2 rounded-lg shadow-md"
             >
-              PHP. 180.00
+              PHP. 120.00
             </div>
             <button
               className="btn bg-red-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-red-700"
@@ -29,19 +29,19 @@ function Drinks() {
       <div className="card bg-white max-w-sm w-full shadow-lg rounded-lg overflow-hidden border border-gray-200">
         <figure className="relative">
           <img
-            src="/images/chicken-teriyaki.png"
-            alt="Chicken Teriyaki Bento"
+            src="/images/sakurayu.png"
+            alt="Sakurayu"
             className="w-full h-48 object-cover"
           />
         </figure>
         <div className="p-6 text-center">
-          <h2 className="text-2xl font-semibold mb-2">Chicken Teriyaki Bento</h2>
-          <p className="text-lg text-gray-600 mb-4">Tender chicken teriyaki served with rice and vegetables.</p>
+          <h2 className="text-2xl font-semibold mb-2">Sakurayu</h2>
+          <p className="text-lg text-gray-600 mb-4">A delicate and aromatic Japanese tea made from dried cherry blossoms</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <div
               className="bg-gray-200 text-gray-700 font-medium px-4 py-2 rounded-lg shadow-md"
             >
-              PHP. 200.00
+              PHP. 120.00
             </div>
             <button
               className="btn bg-red-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-red-700"
@@ -54,19 +54,19 @@ function Drinks() {
       <div className="card bg-white max-w-sm w-full shadow-lg rounded-lg overflow-hidden border border-gray-200">
         <figure className="relative">
           <img
-            src="/images/sushi-bento.png"
-            alt="Sushi Bento"
+            src="/images/black-coffee.png"
+            alt="Black Coffee"
             className="w-full h-48 object-cover"
           />
         </figure>
         <div className="p-6 text-center">
-          <h2 className="text-2xl font-semibold mb-2">Sushi Bento</h2>
-          <p className="text-lg text-gray-600 mb-4">A delightful sushi bento box with assorted sushi rolls and sides.</p>
+          <h2 className="text-2xl font-semibold mb-2">Black Coffee</h2>
+          <p className="text-lg text-gray-600 mb-4">A robust and full-bodied coffee brewed without milk or sugar, showcasing rich and bold flavors</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <div
               className="bg-gray-200 text-gray-700 font-medium px-4 py-2 rounded-lg shadow-md"
             >
-              PHP. 250.00
+              PHP. 80.00
             </div>
             <button
               className="btn bg-red-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-red-700"
