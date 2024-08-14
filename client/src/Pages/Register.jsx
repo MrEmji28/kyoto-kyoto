@@ -5,10 +5,13 @@ import Footer from "../Components/Footer";
 import axios from "axios";
 
 function Register() {
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [address, setAddress] = useState("");
   const [error, setError] = useState(""); // To handle errors
 
   const handleSubmit = async (event) => {
@@ -19,10 +22,13 @@ function Register() {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", {
+      const response = await axios.post("http://localhost:3001/api/auth/register", {
         email,
         password,
-        firstName: name, // Map name to firstName if required
+        firstName,
+        lastName,
+        phoneNumber,
+        address,
       });
       console.log("Registration successful:", response.data);
       // Handle successful registration (e.g., redirect to login page)
@@ -42,14 +48,27 @@ function Register() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Name</span>
+                <span className="label-text">First Name</span>
               </label>
               <input
                 type="text"
-                placeholder="Enter your name"
+                placeholder="Enter your first name"
                 className="input input-bordered w-full"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Last Name</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Enter your last name"
+                className="input input-bordered w-full"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
                 required
               />
             </div>
@@ -89,6 +108,32 @@ function Register() {
                 className="input input-bordered w-full"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Phone Number</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Enter your phone number"
+                className="input input-bordered w-full"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Address</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Enter your address"
+                className="input input-bordered w-full"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
                 required
               />
             </div>
