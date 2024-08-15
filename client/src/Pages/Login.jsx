@@ -9,7 +9,6 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(""); // To handle errors
-  const [token, setToken] = useState(""); // To store JWT token (if needed)
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,8 +18,10 @@ function Login() {
         password,
       });
       console.log("Login successful:", response.data);
-      setToken(response.data.token); // Save the token (or handle it as needed)
-      // Handle successful login (e.g., redirect to another page)
+      // Save token to local storage or context
+      localStorage.setItem("token", response.data.token);
+      // Optionally handle redirection or state update
+      // window.location.href = "/dashboard"; // Example: Redirect to dashboard
     } catch (error) {
       console.error("Error logging in:", error.response?.data || error.message);
       setError(error.response?.data?.error || "An error occurred during login");
