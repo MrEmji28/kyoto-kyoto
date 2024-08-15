@@ -4,6 +4,7 @@ import { authRoutes } from './routes/authRoutes';
 import { userRoutes } from './routes/userRoutes';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import { menuRoutes } from './routes/menuRoutes';
 
 // Initialize the Express application
 const app = express();
@@ -16,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // Parse URL encoded bodies
 // API routes
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
+app.use('/api/menu-items', menuRoutes);
 
 // Default route
 app.get('/', (req: Request, res: Response) => {
