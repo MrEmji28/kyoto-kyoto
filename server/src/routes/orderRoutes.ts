@@ -8,4 +8,4 @@ router.get('/orders/:id', orderController.getOrderById);
 router.get('/customers/:customerId/orders', orderController.getOrdersByCustomerId);
 router.patch('/orders/:id/status', orderController.updateOrderStatus);
 
-export default router;
+export default router; // Default export
