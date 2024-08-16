@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Bento from "../Components/Menu/Bento";
 import Ramen from "../Components/Menu/Ramen";
 import Sushi from "../Components/Menu/Sushi";
@@ -7,104 +8,31 @@ import NavBar from "../Components/NavBar";
 
 function Menu() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [menuItems, setMenuItems] = useState([]);
+  const [error, setError] = useState("");
 
-  const bentoItems = [
-    {
-      id: 1,
-      imageUrl: "/images/katsu-curry.png",
-      name: "Pork Katsu Curry Bento",
-      description: "A delicious bento box with pork katsu curry, rice, and vegetables.",
-      price: 200.00
-    },
-    {
-      id: 2,
-      imageUrl: "/images/chicken-teriyaki.png",
-      name: "Chicken Teriyaki Bento",
-      description: "Tender chicken teriyaki served with rice and vegetables.",
-      price: 200.00
-    },
-    {
-      id: 3,
-      imageUrl: "/images/sushi-bento.png",
-      name: "Sushi Bento",
-      description: "A delightful sushi bento box with assorted sushi rolls and sides.",
-      price: 200.00
-    }
-  ];
+  useEffect(() => {
+    // Fetch menu items from the backend API
+    const fetchMenuItems = async () => {
+      try {
+        const response = await axios.get("http://localhost:3001/api/menu-items");
+        setMenuItems(response.data);
+      } catch (error) {
+        console.error("Error fetching menu items:", error.response?.data || error.message);
+        setError("Failed to load menu items.");
+      }
+    };
 
-  const ramenItems = [
-    {
-      id: 1,
-      imageUrl: "/images/shoyu-ramen.png",
-      name: "Shoyu Ramen",
-      description: "A classic ramen featuring a flavorful soy-based broth",
-      price: 150.00
-    },
-    {
-      id: 2,
-      imageUrl: "/images/tonkotsu-ramen.png",
-      name: "Tonkotsu Ramen",
-      description: "A rich and creamy ramen made with a savory pork bone broth",
-      price: 150.00
-    },
-    {
-      id: 3,
-      imageUrl: "/images/miso-ramen.png",
-      name: "Miso Ramen",
-      description: "A hearty ramen with a savory miso-based broth",
-      price: 150.00
-    }
-  ];
+    fetchMenuItems();
+  }, []);
 
-  const sushiItems = [
-    {
-      id: 1,
-      imageUrl: "/images/salmon-sashimi.png",
-      name: "Salmon Sashimi",
-      description: "Fresh, thinly sliced salmon served raw, highlighting its rich, buttery texture and delicate flavor",
-      price: 280.00
-    },
-    {
-      id: 2,
-      imageUrl: "/images/salmon-nigiri.png",
-      name: "Salmon Nigiri",
-      description: "Succulent slices of fresh salmon delicately draped over a small mound of seasoned sushi rice",
-      price: 280.00
-    },
-    {
-      id: 3,
-      imageUrl: "/images/california-maki.png",
-      name: "California Maki",
-      description: "A delicious sushi roll featuring a blend of creamy avocado, sweet crab meat, and crisp cucumber",
-      price: 220.00
-    }
-  ];
+  // Filter items based on the selected category
+  const filteredItems = (category) => menuItems.filter(item => category === "All" || item.category === category);
 
-  const drinksItems = [
-    {
-      id: 1,
-      imageUrl: "/images/kyoto-milktea.png",
-      name: "Kyoto Milk Tea",
-      description: "A smooth and creamy milk tea infused with a hint of traditional Japanese flavors",
-      price: 120.00
-    },
-    {
-      id: 2,
-      imageUrl: "/images/sakurayu.png",
-      name: "Sakurayu",
-      description: "A delicate and aromatic Japanese tea made from dried cherry blossoms",
-      price: 120.00
-    },
-    {
-      id: 3,
-      imageUrl: "/images/black-coffee.png",
-      name: "Black Coffee",
-      description: "A robust and full-bodied coffee brewed without milk or sugar, showcasing rich and bold flavors",
-      price: 80.00
-    }
-  ];
-
-  // Similar data can be added for other categories
+  const bentoItems = filteredItems("Bento");
+  const ramenItems = filteredItems("Ramen");
+  const sushiItems = filteredItems("Sushi");
+  const drinksItems = filteredItems("Drinks");
 
   return (
     <>
@@ -142,6 +70,7 @@ function Menu() {
             Drinks
           </button>
         </div>
+        {error && <p className="text-red-500 text-center">{error}</p>}
         {selectedCategory === "All" && (
           <>
             <Bento items={bentoItems} />
