@@ -102,8 +102,8 @@
      description: "A robust and full-bodied coffee brewed without milk or sugar, showcasing rich and bold flavors",
      price: 80.00
    }
-    ];
-    
+ ];
+ 
     // Add to cart and open the modal
     const addToCart = (item) => {
       setCart(prevCart => {
